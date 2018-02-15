@@ -9,7 +9,7 @@ This is the collection of reusable Spinnaker patterns.
 
 ## How to edit 
 - ```yarn ```
-- ```npm start```
+- ```yarn start```
 - Gulp monitors for changes to styles css and styleguide-template and rebuild the styleguide and the css vars json
 
 ## Usage 
