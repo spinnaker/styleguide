@@ -31,7 +31,7 @@ gulp.task('build:styleguide', function () {
           nano
       ]))
       .pipe(concat('./public/styleguide.min.css'))
-      .pipe(gulp.dest('..'))
+      .pipe(gulp.dest('.'))
 })
 
 gulp.task('default', function() {

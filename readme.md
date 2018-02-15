@@ -6,3 +6,19 @@ This is the collection of reusable Spinnaker patterns.
 - Style guide generator (gulpfile.js)
 - Style guide generated in public/ directory
 - Style guide template in src/styleguide-template
+
+## How to edit 
+- yarn 
+- npm start
+- Gulp monitors for changes to styles css and styleguide-template and rebuild the styleguide and the css vars json
+
+## Usage 
+- yarn add @spinnaker/styleguide
+- get the /public/styleguide.min.css for the full CSS pattern library
+- get css-vars.json for the variables
+
+# Contributions
+- Please use the guidelines [here](https://www.spinnaker.io/community/contributing/submitting/) to submit a PR
+
+# Issues 
+- Please create any issues [here](https://github.com/spinnaker/styleguide/issues)
