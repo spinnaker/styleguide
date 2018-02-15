@@ -1,0 +1,24 @@
+{
+  "name": "@spinnaker/styleguide",
+  "version": "1.0.0",
+  "description": "Base styles used within Spinnaker as CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.0.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.1",
+    "postcss-css-variables": "^0.8.0",
+    "postcss-export-vars": "^0.2.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^11.1.0",
+    "postcss-style-guide": "^0.14.0"
+  }
+}
