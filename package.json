@@ -18,9 +18,10 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^7.0.1",
     "postcss-css-variables": "^0.8.0",
-    "postcss-export-vars": "^0.2.0",
     "postcss-extend": "^1.0.5",
+    "postcss-extract-vars": "^0.0.1",
     "postcss-import": "^11.1.0",
     "postcss-style-guide": "^0.14.0"
-  }
+  },
+  "devDependencies": {}
 }

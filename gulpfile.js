@@ -10,15 +10,14 @@ gulp.task('build:styleguide', function () {
     const styleGuide = require('postcss-style-guide');
     const extend = require('postcss-extend');
     const nano = require('cssnano');
-    const exportVars = require('postcss-export-vars');
+    const extractVars = require('postcss-extract-vars');
 
     return gulp.src('./src/styles/app.css')
       .pipe(postcss([
           Import,
           extend,
-          exportVars({
-            type: 'json',
-            file: './public/css-vars.json'
+          extractVars({
+            file: './public/customVars.css'
           }),
           customProperties({ preserve: true }),
           autoprefixer,
