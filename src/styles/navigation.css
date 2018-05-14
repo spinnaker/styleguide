@@ -185,7 +185,6 @@ nav.third-level {
 
 nav.third-level h3 {
   margin: 0;
-  width: 260px;
   text-transform: capitalize;
   font-weight: 600;
   color: var(--color-primary);
@@ -231,6 +230,7 @@ nav.third-level .nav-item:focus .badge {
   background-color: var(--color-primary);
 } 
 
-nav {
+/* For the styleguide itself */
+.psg-main nav.top-level, nav.second-level, nav.third-level {
   width: 1000px;
 }
