@@ -167,12 +167,6 @@ nav.second-level .nav-item:hover {
   color: var(--color-primary);
 }
 
-nav.second-level .nav-item.active .badge, 
-nav.second-level .nav-item:focus .badge, 
-nav.second-level .nav-item:hover .badge {
-  background-color: var(--color-primary);
-}
-
 nav.second-level .nav-item.active:after, 
 nav.second-level .nav-item:focus:after, 
 nav.second-level .nav-item:hover:after {
@@ -223,12 +217,6 @@ nav.third-level .nav-item:focus {
   border-bottom-color: var(--color-primary);
   transition: border-bottom-color 200ms ease-in, color 200ms ease-in;
 }
-
-nav.third-level .nav-item.active .badge,
-nav.third-level .nav-item:hover .badge,
-nav.third-level .nav-item:focus .badge {
-  background-color: var(--color-primary);
-} 
 
 /* For the styleguide itself */
 .psg-main nav.top-level, nav.second-level, nav.third-level {
