@@ -1,0 +1,224 @@
+/*
+@styleguide
+
+@title Navigation
+
+<nav class="top-level">
+  <div class="container horizontal middle">
+    <h1 class="heading-3 title"> Spinnaker </h1>
+    <ul class="nostyle">
+      <li class="nav-item active">Item 1</li>
+      <li class="nav-item">Item 2</li>
+      <li class="nav-item">Item 3</li>
+    </ul>
+  </div>
+</nav>
+<nav class="second-level">  
+  <div class="container horizontal middle">
+    <h2 class="title heading-2">Heading</h2>
+    <ul class="nostyle contents">
+      <li class="nav-item active">Item 1</li>
+      <li class="nav-item">Item 2</li>
+      <li class="nav-item">Item 3</li>
+    </ul>
+  </div>
+</nav>
+<nav class="third-level">
+  <div class="container horizontal middle">
+    <h2 class="title horizontal">Heading</h2>
+    <ul class="nostyle contents">
+      <li class="nav-item">Item 1</li>
+      <li class="nav-item active">Item 2</li>
+      <li class="nav-item">Item 3</li>
+    </ul>
+  </div>
+</nav>
+
+    <nav class="top-level">
+      <div class="container horizontal middle">
+        <h1 class="heading-3 title"> Spinnaker </h1>
+        <ul class="nostyle">
+          <li class="nav-item active">Item 1</li>
+          <li class="nav-item">Item 2</li>
+          <li class="nav-item">Item 3</li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="second-level">
+      <div class="container horizontal middle">
+        <h2 class="title heading-2">Heading</h2>
+        <ul class="nostyle contents">
+          <li class="nav-item active">Item 1</li>
+          <li class="nav-item">Item 2</li>
+          <li class="nav-item active">Item 3</li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="third-level">
+      <div class="container horizontal middle">
+        <h2 class="title heading-2">Heading</h2>
+        <ul class="nostyle contents">
+          <li class="nav-item">Item 1</li>
+          <li class="nav-item active">Item 2</li>
+          <li class="nav-item">Item 3</li>
+        </ul>
+      </div>
+    </nav>
+*/
+
+
+nav.top-level, nav.second-level, nav.third-level {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+nav.top-level .nav-item, nav.second-level .nav-item, nav.third-level .nav-item {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav.top-level ul, nav.second-level ul, nav.third-level ul {
+  display: flex;
+  align-items: center;
+}
+
+nav.top-level > .container, nav.second-level > .container, nav.third-level > .container {
+  grid-column-start: 2;
+  grid-column-end: 12;
+}
+
+nav.second-level > .container > .title, nav.third-level > .container > .title {
+  width: 140px;
+  word-break: break-word;
+}
+
+nav.top-level {
+  height: 40px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+nav.top-level .title {
+  padding-right: 30px;
+}
+ 
+nav.top-level .nav-item {
+  padding: 10px 20px;
+  color: var(--color-white);
+}
+
+nav.top-level .nav-item.active, 
+nav.top-level .nav-item:hover,
+nav.top-level .nav-item:focus {
+  background-color: var(--color-primary-g1);
+}
+
+nav.top-level .nav-item {
+  padding: 0 20px;
+  color: var(--color-white);
+  font-weight: 200;
+  font-size: 14px;
+}
+
+nav.second-level {
+  background-color: var(--color-accent-g2);
+  height: 80px;
+}
+
+nav.second-level:after {
+  content: ' ';
+  height: 0;
+  width: 100%;
+  display: block;
+  position: relative;
+  box-shadow: 0 0 3px 1px var(--color-alto);
+}
+
+nav.second-level .nav-item, nav.third-level .nav-item {
+  padding: 0 25px;
+  text-transform: uppercase;
+}
+
+nav.second-level .nav-item {
+  position: relative;
+}
+
+nav.second-level .nav-item:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  left: calc(50% - 16px);
+  bottom: 0;
+  z-index: 3;
+  transition: border-bottom-color 200ms ease-in;
+}  
+
+nav.second-level .nav-item.active, 
+nav.second-level .nav-item:focus, 
+nav.second-level .nav-item:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+nav.second-level .nav-item.active:after, 
+nav.second-level .nav-item:focus:after, 
+nav.second-level .nav-item:hover:after {
+  border-bottom-color: var(--color-white);
+}
+
+nav.third-level {
+  height: 60px;
+}
+
+nav.third-level h3 {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--color-primary);
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+@media (max-width: 1400px) {
+  nav.third-level h3 {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  nav.third-level .nav-item {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+nav.third-level {
+  padding-top: 5px;
+  border-bottom: 1px solid var(--color-accent-g2);
+}
+
+nav.third-level .nav-item {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  border-bottom: 3px solid transparent;
+}
+
+nav.third-level .nav-item.active,
+nav.third-level .nav-item:hover,
+nav.third-level .nav-item:focus {
+  text-decoration: none;
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  transition: border-bottom-color 200ms ease-in, color 200ms ease-in;
+}
+
+/* For the styleguide itself */
+.psg-main nav.top-level, nav.second-level, nav.third-level {
+  width: 1000px;
+}

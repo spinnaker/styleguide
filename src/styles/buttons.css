@@ -72,8 +72,7 @@ Button groups offer a section for the buttons to go. It comes with default
 margins between buttons.
 
 <div class="button-group">
-  <button class="passive">Cancel</button>
-  <button class="primary">Ok</button>
+  <button class="passive">Cancel</button><button class="primary">Ok</button>
 </div>
 */
 

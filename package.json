@@ -4,7 +4,7 @@
   "description": "Base styles used within Spinnaker as CSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "node index.js & gulp"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,7 @@
     "postcss-import": "^11.1.0",
     "postcss-style-guide": "^0.14.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
 }
