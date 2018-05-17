@@ -11,6 +11,7 @@ This is the collection of reusable Spinnaker patterns.
 - ```yarn ```
 - ```yarn start```
 - Gulp monitors for changes to styles css and styleguide-template and rebuild the styleguide and the css vars json
+- Visit localhost:7101 to see the style guide
 
 ## Usage 
 - ```yarn add @spinnaker/styleguide```
