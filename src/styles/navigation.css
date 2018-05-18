@@ -76,8 +76,7 @@ nav.top-level .nav-item, nav.second-level .nav-item, nav.third-level .nav-item {
   cursor: pointer;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 nav.top-level ul, nav.second-level ul, nav.third-level ul {
@@ -88,11 +87,16 @@ nav.top-level ul, nav.second-level ul, nav.third-level ul {
 nav.top-level > .container, nav.second-level > .container, nav.third-level > .container {
   grid-column-start: 2;
   grid-column-end: 12;
+  height: 100%;
 }
 
 nav.second-level > .container > .title, nav.third-level > .container > .title {
-  width: 140px;
+  width: 180px;
   word-break: break-word;
+}
+
+nav.top-level ul, nav.second-level ul, nav.third-level ul {
+  height: 100%;
 }
 
 nav.top-level {
@@ -126,20 +130,15 @@ nav.top-level .nav-item {
 nav.second-level {
   background-color: var(--color-accent-g2);
   height: 80px;
-}
-
-nav.second-level:after {
-  content: ' ';
-  height: 0;
-  width: 100%;
-  display: block;
-  position: relative;
-  box-shadow: 0 0 3px 1px var(--color-alto);
+  box-shadow:  0 2px 3px -1px var(--color-alto);
 }
 
 nav.second-level .nav-item, nav.third-level .nav-item {
   padding: 0 25px;
-  text-transform: uppercase;
+}
+
+nav.third-level .nav-item {
+  margin: 0 25px;
 }
 
 nav.second-level .nav-item {
@@ -155,7 +154,7 @@ nav.second-level .nav-item:after {
   border-bottom: 10px solid transparent;
   position: absolute;
   left: calc(50% - 16px);
-  bottom: 0;
+  bottom: -3px;
   z-index: 3;
   transition: border-bottom-color 200ms ease-in;
 }  
@@ -200,6 +199,9 @@ nav.third-level h3 {
 
 nav.third-level {
   padding-top: 5px;
+}
+
+nav.third-level .container {
   border-bottom: 1px solid var(--color-accent-g2);
 }
 
@@ -219,6 +221,6 @@ nav.third-level .nav-item:focus {
 }
 
 /* For the styleguide itself */
-.psg-main nav.top-level, nav.second-level, nav.third-level {
+.psg-main nav.top-level, .psg-main nav.second-level, .psg-main nav.third-level {
   width: 1000px;
 }
