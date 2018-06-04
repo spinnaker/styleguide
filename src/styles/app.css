@@ -11,6 +11,9 @@
 @import 'pillsAndTags.css';
 @import 'icons.css';
 @import 'navigation.css';
+@import 'checkbox.css';
+@import 'message.css';
+@import 'forms.css';
 
 :root {
   --is-phone: false;

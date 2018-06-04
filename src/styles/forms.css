@@ -1,0 +1,1182 @@
+/* Adapted from Semantic UI for Spinnaker */
+/* WORK IN PROGRESS */
+
+/*
+@styleguide
+
+@title Forms 
+
+Here's a work in progress for forms. 
+The form below is a typical layout of inputs for Spinnaker.
+
+<form class="sp-form medium error">
+  <div class="inline field">
+    <label>
+      Name
+          <i class="fa fa-question-circle"></i>
+    </label>
+    <input type="text" name="first-name" placeholder="Name">
+  </div>
+  <div class="inline field required error">
+    <label>Owner Email</label>
+    <input type="text" name="last-name" placeholder="Owner email">
+  </div>
+  <div class="error sp-message">
+    <div class="header">Action Forbidden</div>
+    <p>You can only sign up for an account once with a given e-mail address.</p>
+  </div>
+  <div class="inline field required">
+    <label>App Group</label>
+    <input type="text" name="last-name" placeholder="Application group for CC">
+  </div>
+  <div class="inline field required">
+    <label>Pager Duty</label>
+    <input type="text" name="last-name" placeholder="Pager Duty handle">
+  </div>
+  <div class="inline field required">
+    <label>Repo Type</label>
+    <input type="text" name="last-name" placeholder="Repo Type">
+  </div>
+  <div class="inline field required">
+    <label>Repo Project</label>
+    <input type="text" name="last-name" placeholder="Repo Project">
+  </div>
+  <div class="inline field required">
+    <label>Owner Email</label>
+    <input type="text" name="last-name" placeholder="Owner email">
+  </div>
+  <div class="inline field required multitextinput">
+    <label>Cloud Provider</label>
+    <div class="fields grouped textbox">
+      <div class="inline field">
+        <input type="text" name="last-name" placeholder="Cloud providers">
+        <i class="fa fa-trash"></i>
+      </div>
+      <div class="inline field">
+        <input type="text" name="last-name" placeholder="Cloud providers">
+        <i class="fa fa-trash"></i>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="inline field">
+      <label>Pipeline</label>
+      <div class="fields grouped">
+        <div class="sp-form field checkbox inline">
+          <input type="checkbox" tabindex="0">
+          <label>Consider only cloud provider health when executing tasks</label>
+        </div>
+        <div class="sp-form field checkbox inline">
+          <input type="checkbox" tabindex="0">
+          <label>Consider only cloud provider health when executing tasks</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-group">
+    <button class="passive">Cancel</button>
+    <button class="primary">Update</button>
+  </div>
+</form>
+
+*/
+
+/*!
+ * # Semantic UI 2.3.1 - Form
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+
+
+/*******************************
+            Elements
+*******************************/
+
+
+/*--------------------
+        Form
+---------------------*/
+
+.sp-form {
+  position: relative;
+  max-width: 100%;
+}
+
+.sp-form .medium {
+  margin: 20px;
+}
+
+/*--------------------
+        Content
+---------------------*/
+
+.sp-form > p {
+  margin: 1em 0em;
+}
+
+/*----
+Icons
+-----*/
+
+.sp-form input[type="text"] + i {
+  padding: 6px 0; 
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.sp-form label > i {
+  padding: 2px 0; 
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  color: var(--color-titanium);
+  cursor: pointer;
+}
+
+/*--------------------
+        Field
+---------------------*/
+
+.sp-form .field {
+  clear: both;
+  margin-bottom: 6px;
+}
+.sp-form .field:last-child,
+.sp-form .fields:last-child .field {
+  margin-bottom: 0em;
+}
+.sp-form .fields .field {
+  clear: both;
+  margin: 0em;
+}
+
+/*--------------------
+        Labels
+---------------------*/
+
+.sp-form .field > label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  text-transform: none;
+}
+
+/*--------------------
+    Standard Inputs
+---------------------*/
+
+.sp-form textarea,
+.sp-form input:not([type]),
+.sp-form input[type="date"],
+.sp-form input[type="datetime-local"],
+.sp-form input[type="email"],
+.sp-form input[type="number"],
+.sp-form input[type="password"],
+.sp-form input[type="search"],
+.sp-form input[type="tel"],
+.sp-form input[type="time"],
+.sp-form input[type="text"],
+.sp-form input[type="file"],
+.sp-form input[type="url"] {
+  vertical-align: top;
+}
+
+/* Set max height on unusual input */
+.sp-form ::-webkit-datetime-edit,
+.sp-form ::-webkit-inner-spin-button {
+  height: 1.21428571em;
+}
+.sp-form input:not([type]),
+.sp-form input[type="date"],
+.sp-form input[type="datetime-local"],
+.sp-form input[type="email"],
+.sp-form input[type="number"],
+.sp-form input[type="password"],
+.sp-form input[type="search"],
+.sp-form input[type="tel"],
+.sp-form input[type="time"],
+.sp-form input[type="text"],
+.sp-form input[type="file"],
+.sp-form input[type="url"] {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0em;
+  outline: none;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255, 255, 255, 0);
+  line-height: 1.21428571em;
+  padding: 6px 12px;
+  font-size: 12px;
+  background:var(--color-white);
+  border: 1px solid var(--color-divider);
+  color: var(--color-text-secondary);
+  border-radius: 3px;
+  -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
+          box-shadow: 0em 0em 0em 0em transparent inset;
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+/* Text Area */
+.sp-form textarea {
+  margin: 0em;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255, 255, 255, 0);
+  padding: 0.78571429em 1em;
+  background: #FFFFFF;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  outline: none;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
+          box-shadow: 0em 0em 0em 0em transparent inset;
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+  font-size: 12px;
+  line-height: 1.2857;
+  resize: vertical;
+}
+.sp-form textarea:not([rows]) {
+  height: 12em;
+  min-height: 8em;
+  max-height: 24em;
+}
+.sp-form textarea,
+.sp-form input[type="checkbox"] {
+  vertical-align: top;
+}
+
+/*--------------------------
+  Input w/ attached Button
+---------------------------*/
+
+.sp-form input.attached {
+  width: auto;
+}
+
+/*--------------------
+     Basic Select
+---------------------*/
+
+.sp-form select {
+  display: block;
+  height: auto;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0em 0em 0em 0em transparent inset;
+          box-shadow: 0em 0em 0em 0em transparent inset;
+  padding: 0.62em 1em;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+}
+
+/*--------------------
+       Dropdown
+---------------------*/
+
+
+/* Block */
+.sp-form .field > .selection.dropdown {
+  width: 100%;
+}
+.sp-form .field > .selection.dropdown > .dropdown.icon {
+  float: right;
+}
+
+/* Inline */
+.sp-form .inline.fields .field > .selection.dropdown,
+.sp-form .inline.field > .selection.dropdown {
+  width: auto;
+}
+.sp-form .inline.fields .field > .selection.dropdown > .dropdown.icon,
+.sp-form .inline.field > .selection.dropdown > .dropdown.icon {
+  float: none;
+}
+
+/*--------------------
+       UI Input
+---------------------*/
+
+
+/* Block */
+.sp-form .field .sp-input,
+.sp-form .fields .field .sp-input,
+.sp-form .wide.field .sp-input {
+  width: 100%;
+}
+
+/* Inline  */
+.sp-form .inline.fields, .sp-form .inline.field {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.sp-form .inline.field > label:first-child {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  text-align: right;
+}
+
+.sp-form .inline.field > input,
+.sp-form .inline.field > div {
+  flex: 1;
+}
+
+.sp-form .inline.fields .field:not(.wide) .sp-input,
+.sp-form .inline.field:not(.wide) .sp-input {
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Auto Input */
+.sp-form .fields .field .sp-input input,
+.sp-form .field .sp-input input {
+  width: auto;
+}
+
+/* Full Width Input */
+.sp-form .ten.fields .sp-input input,
+.sp-form .nine.fields .sp-input input,
+.sp-form .eight.fields .sp-input input,
+.sp-form .seven.fields .sp-input input,
+.sp-form .six.fields .sp-input input,
+.sp-form .five.fields .sp-input input,
+.sp-form .four.fields .sp-input input,
+.sp-form .three.fields .sp-input input,
+.sp-form .two.fields .sp-input input,
+.sp-form .wide.field .sp-input input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 0px;
+}
+
+/*--------------------
+   Types of Messages
+---------------------*/
+
+.sp-form .success.message,
+.sp-form .warning.message,
+.sp-form .error.message {
+  display: none;
+}
+
+/* Assumptions */
+.sp-form .message:first-child {
+  margin-top: 0px;
+}
+
+/*--------------------
+   Validation Prompt
+---------------------*/
+
+.sp-form .field .prompt.label {
+  white-space: normal;
+  background: #FFFFFF !important;
+  border: 1px solid var(--color-danger) !important;
+  color: #9F3A38 !important;
+}
+.sp-form .inline.fields .field .prompt,
+.sp-form .inline.field .prompt {
+  vertical-align: top;
+  margin: -0.25em 0em -0.5em 0.5em;
+}
+.sp-form .inline.fields .field .prompt:before,
+.sp-form .inline.field .prompt:before {
+  border-width: 0px 0px 1px 1px;
+  bottom: auto;
+  right: auto;
+  top: 50%;
+  left: 0em;
+}
+
+
+/*******************************
+            States
+*******************************/
+
+
+/*--------------------
+      Autofilled
+---------------------*/
+
+.sp-form .field.field input:-webkit-autofill {
+  -webkit-box-shadow: 0px 0px 0px 100px #FFFFF0 inset !important;
+          box-shadow: 0px 0px 0px 100px #FFFFF0 inset !important;
+  border-color: #E5DFA1 !important;
+}
+
+/* Focus */
+.sp-form .field.field input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0px 0px 0px 100px #FFFFF0 inset !important;
+          box-shadow: 0px 0px 0px 100px #FFFFF0 inset !important;
+  border-color: #D5C315 !important;
+}
+
+/* Error */
+.sp-form .error.error input:-webkit-autofill {
+  -webkit-box-shadow: 0px 0px 0px 100px #FFFAF0 inset !important;
+          box-shadow: 0px 0px 0px 100px #FFFAF0 inset !important;
+  border-color: var(--color-danger) !important;
+}
+
+/*--------------------
+      Placeholder
+---------------------*/
+
+
+/* browsers require these rules separate */
+.sp-form ::-webkit-input-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+.sp-form :-ms-input-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+.sp-form ::-moz-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+.sp-form :focus::-webkit-input-placeholder {
+  color: rgba(115, 115, 115, 0.87);
+}
+.sp-form :focus:-ms-input-placeholder {
+  color: rgba(115, 115, 115, 0.87);
+}
+.sp-form :focus::-moz-placeholder {
+  color: rgba(115, 115, 115, 0.87);
+}
+
+/* Error Placeholder */
+.sp-form .error ::-webkit-input-placeholder {
+  color: #e7bdbc;
+}
+.sp-form .error :-ms-input-placeholder {
+  color: #e7bdbc !important;
+}
+.sp-form .error ::-moz-placeholder {
+  color: #e7bdbc;
+}
+.sp-form .error :focus::-webkit-input-placeholder {
+  color: #da9796;
+}
+.sp-form .error :focus:-ms-input-placeholder {
+  color: #da9796 !important;
+}
+.sp-form .error :focus::-moz-placeholder {
+  color: #da9796;
+}
+
+/*--------------------
+        Focus
+---------------------*/
+
+.sp-form input:not([type]):focus,
+.sp-form input[type="date"]:focus,
+.sp-form input[type="datetime-local"]:focus,
+.sp-form input[type="email"]:focus,
+.sp-form input[type="number"]:focus,
+.sp-form input[type="password"]:focus,
+.sp-form input[type="search"]:focus,
+.sp-form input[type="tel"]:focus,
+.sp-form input[type="time"]:focus,
+.sp-form input[type="text"]:focus,
+.sp-form input[type="file"]:focus,
+.sp-form input[type="url"]:focus {
+  color: rgba(0, 0, 0, 0.95);
+  border-color: var(--color-accent-g1);
+  border-radius: 0.28571429rem;
+  background: var(--color-white);
+  -webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+          box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+}
+.sp-form textarea:focus {
+  color: rgba(0, 0, 0, 0.95);
+  border-color: #85B7D9;
+  border-radius: 0.28571429rem;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+          box-shadow: 0px 0em 0em 0em rgba(34, 36, 38, 0.35) inset;
+  -webkit-appearance: none;
+}
+
+/*--------------------
+        Success
+---------------------*/
+
+
+/* On Form */
+.sp-form.success .success.message:not(:empty) {
+  display: block;
+}
+.sp-form.success .compact.success.message:not(:empty) {
+  display: inline-block;
+}
+.sp-form.success .icon.success.message:not(:empty) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*--------------------
+        Warning
+---------------------*/
+
+
+/* On Form */
+.sp-form.warning .warning.message:not(:empty) {
+  display: block;
+}
+.sp-form.warning .compact.warning.message:not(:empty) {
+  display: inline-block;
+}
+.sp-form.warning .icon.warning.message:not(:empty) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*--------------------
+        Error
+---------------------*/
+
+
+/* On Form */
+.sp-form.error .error.message:not(:empty) {
+  display: block;
+}
+.sp-form.error .compact.error.message:not(:empty) {
+  display: inline-block;
+}
+.sp-form.error .icon.error.message:not(:empty) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* On Field(s) */
+.sp-form .fields.error .field label,
+.sp-form .field.error label,
+.sp-form .fields.error .field .input,
+.sp-form .field.error .input {
+  color: var(--color-danger);
+}
+.sp-form .fields.error .field .corner.label,
+.sp-form .field.error .corner.label {
+  border-color: var(--color-danger);
+  color: var(--color-white);
+}
+.sp-form .fields.error .field textarea,
+.sp-form .fields.error .field select,
+.sp-form .fields.error .field input:not([type]),
+.sp-form .fields.error .field input[type="date"],
+.sp-form .fields.error .field input[type="datetime-local"],
+.sp-form .fields.error .field input[type="email"],
+.sp-form .fields.error .field input[type="number"],
+.sp-form .fields.error .field input[type="password"],
+.sp-form .fields.error .field input[type="search"],
+.sp-form .fields.error .field input[type="tel"],
+.sp-form .fields.error .field input[type="time"],
+.sp-form .fields.error .field input[type="text"],
+.sp-form .fields.error .field input[type="file"],
+.sp-form .fields.error .field input[type="url"],
+.sp-form .field.error textarea,
+.sp-form .field.error select,
+.sp-form .field.error input:not([type]),
+.sp-form .field.error input[type="date"],
+.sp-form .field.error input[type="datetime-local"],
+.sp-form .field.error input[type="email"],
+.sp-form .field.error input[type="number"],
+.sp-form .field.error input[type="password"],
+.sp-form .field.error input[type="search"],
+.sp-form .field.error input[type="tel"],
+.sp-form .field.error input[type="time"],
+.sp-form .field.error input[type="text"],
+.sp-form .field.error input[type="file"],
+.sp-form .field.error input[type="url"] {
+  background: #FFF6F6;
+  border-color: var(--color-danger);
+  color: #9F3A38;
+  border-radius: '';
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.sp-form .field.error textarea:focus,
+.sp-form .field.error select:focus,
+.sp-form .field.error input:not([type]):focus,
+.sp-form .field.error input[type="date"]:focus,
+.sp-form .field.error input[type="datetime-local"]:focus,
+.sp-form .field.error input[type="email"]:focus,
+.sp-form .field.error input[type="number"]:focus,
+.sp-form .field.error input[type="password"]:focus,
+.sp-form .field.error input[type="search"]:focus,
+.sp-form .field.error input[type="tel"]:focus,
+.sp-form .field.error input[type="time"]:focus,
+.sp-form .field.error input[type="text"]:focus,
+.sp-form .field.error input[type="file"]:focus,
+.sp-form .field.error input[type="url"]:focus {
+  background: #FFF6F6;
+  border-color: var(--color-danger);
+  color: #9F3A38;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Preserve Native Select Stylings */
+.sp-form .field.error select {
+  -webkit-appearance: menulist-button;
+}
+
+/*------------------
+    Dropdown Error
+--------------------*/
+
+.sp-form .fields.error .field .sp-dropdown,
+.sp-form .fields.error .field .sp-dropdown .item,
+.sp-form .field.error .sp-dropdown,
+.sp-form .field.error .sp-dropdown .text,
+.sp-form .field.error .sp-dropdown .item {
+  background: #FFF6F6;
+  color: #9F3A38;
+}
+.sp-form .fields.error .field .sp-dropdown,
+.sp-form .field.error .sp-dropdown {
+  border-color: var(--color-danger) !important;
+}
+.sp-form .fields.error .field .sp-dropdown:hover,
+.sp-form .field.error .sp-dropdown:hover {
+  border-color: var(--color-danger) !important;
+}
+.sp-form .fields.error .field .sp-dropdown:hover .menu,
+.sp-form .field.error .sp-dropdown:hover .menu {
+  border-color: var(--color-danger);
+}
+.sp-form .fields.error .field .sp-multiple.selection.dropdown > .label,
+.sp-form .field.error .sp-multiple.selection.dropdown > .label {
+  background-color: #EACBCB;
+  color: #9F3A38;
+}
+
+/* Hover */
+.sp-form .fields.error .field .sp-dropdown .menu .item:hover,
+.sp-form .field.error .sp-dropdown .menu .item:hover {
+  background-color: #FBE7E7;
+}
+
+/* Selected */
+.sp-form .fields.error .field .sp-dropdown .menu .selected.item,
+.sp-form .field.error .sp-dropdown .menu .selected.item {
+  background-color: #FBE7E7;
+}
+
+/* Active */
+.sp-form .fields.error .field .sp-dropdown .menu .active.item,
+.sp-form .field.error .sp-dropdown .menu .active.item {
+  background-color: #FDCFCF !important;
+}
+
+/*--------------------
+    Checkbox Error
+---------------------*/
+
+.sp-form .fields.error .field .checkbox:not(.toggle):not(.slider) label,
+.sp-form .field.error .checkbox:not(.toggle):not(.slider) label,
+.sp-form .fields.error .field .checkbox:not(.toggle):not(.slider) .box,
+.sp-form .field.error .checkbox:not(.toggle):not(.slider) .box {
+  color: #9F3A38;
+}
+.sp-form .fields.error .field .checkbox:not(.toggle):not(.slider) label:before,
+.sp-form .field.error .checkbox:not(.toggle):not(.slider) label:before,
+.sp-form .fields.error .field .checkbox:not(.toggle):not(.slider) .box:before,
+.sp-form .field.error .checkbox:not(.toggle):not(.slider) .box:before {
+  background: #FFF6F6;
+  border-color: var(--color-danger);
+}
+.sp-form .fields.error .field .checkbox label:after,
+.sp-form .field.error .checkbox label:after,
+.sp-form .fields.error .field .checkbox .box:after,
+.sp-form .field.error .checkbox .box:after {
+  color: #9F3A38;
+}
+
+/*--------------------
+       Disabled
+---------------------*/
+
+.sp-form .disabled.fields .field,
+.sp-form .disabled.field,
+.sp-form .field :disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+.sp-form .field.disabled > label,
+.sp-form .fields.disabled > label {
+  opacity: 0.45;
+}
+.sp-form .field.disabled :disabled {
+  opacity: 1;
+}
+
+/*--------------
+    Loading
+---------------*/
+
+.sp-loading.form {
+  position: relative;
+  cursor: default;
+  pointer-events: none;
+}
+.sp-loading.form:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 0%;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+.sp-loading.form:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0em 0em -1.5em;
+  width: 3em;
+  height: 3em;
+  -webkit-animation: form-spin 0.6s linear;
+          animation: form-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #767676 rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 0.2em;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent;
+          box-shadow: 0px 0px 0px 1px transparent;
+  visibility: visible;
+  z-index: 101;
+}
+@-webkit-keyframes form-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes form-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+/*******************************
+         Element Types
+*******************************/
+
+
+/*--------------------
+     Required Field
+---------------------*/
+
+.sp-form .required.fields:not(.grouped) > .field > label:after,
+.sp-form .required.fields.grouped > label:after,
+.sp-form .required.field > label:after,
+.sp-form .required.fields:not(.grouped) > .field > .checkbox:after,
+.sp-form .required.field > .checkbox:after {
+  margin: -0.2em 0em 0em 0.2em;
+  content: '*';
+  color: var(--color-danger);
+}
+.sp-form .required.fields:not(.grouped) > .field > label:after,
+.sp-form .required.fields.grouped > label:after,
+.sp-form .required.field > label:after {
+  display: inline-block;
+  vertical-align: top;
+}
+.sp-form .required.fields:not(.grouped) > .field > .checkbox:after,
+.sp-form .required.field > .checkbox:after {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+
+
+/*******************************
+           Variations
+*******************************/
+/*--------------------
+     Field Groups
+---------------------*/
+
+
+/* Grouped Vertically */
+.sp-form .grouped.fields {
+  display: block;
+  margin: 0em 0em 1em;
+}
+.sp-form .grouped.fields:last-child {
+  margin-bottom: 0em;
+}
+.sp-form .grouped.fields > label {
+  margin: 0em 0em 0.28571429rem 0em;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: none;
+}
+.sp-form .grouped.fields .field,
+.sp-form .grouped.inline.fields .field {
+  margin: 0.5em 0em;
+  padding: 0em;
+}
+
+.sp-form .grouped.fields .field:not(.inline) {
+  display: block;
+}
+
+/*--------------------
+        Fields
+---------------------*/
+
+
+/* Split fields */
+.sp-form .fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0em -0.5em 1em;
+}
+.sp-form .fields > .field {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.sp-form .fields > .field:first-child {
+  border-left: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* Other Combinations */
+.sp-form .two.fields > .fields,
+.sp-form .two.fields > .field {
+  width: 50%;
+}
+.sp-form .three.fields > .fields,
+.sp-form .three.fields > .field {
+  width: 33.33333333%;
+}
+.sp-form .four.fields > .fields,
+.sp-form .four.fields > .field {
+  width: 25%;
+}
+.sp-form .five.fields > .fields,
+.sp-form .five.fields > .field {
+  width: 20%;
+}
+.sp-form .six.fields > .fields,
+.sp-form .six.fields > .field {
+  width: 16.66666667%;
+}
+.sp-form .seven.fields > .fields,
+.sp-form .seven.fields > .field {
+  width: 14.28571429%;
+}
+.sp-form .eight.fields > .fields,
+.sp-form .eight.fields > .field {
+  width: 12.5%;
+}
+.sp-form .nine.fields > .fields,
+.sp-form .nine.fields > .field {
+  width: 11.11111111%;
+}
+.sp-form .ten.fields > .fields,
+.sp-form .ten.fields > .field {
+  width: 10%;
+}
+
+/* Swap to full width on mobile */
+@media only screen and (max-width: 767px) {
+  .sp-form .fields {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .ui[class*="equal width"].form:not(.unstackable) .fields > .field,
+  .sp-form:not(.unstackable) [class*="equal width"].fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .two.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .three.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .four.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .four.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .five.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .five.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .six.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .six.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .seven.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .seven.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .eight.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .eight.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .nine.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .nine.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .ten.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .ten.fields:not(.unstackable) > .field {
+    width: 100% !important;
+    margin: 0em 0em 1em;
+  }
+}
+
+/* Sizing Combinations */
+.sp-form .fields .wide.field {
+  width: 6.25%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.sp-form .one.wide.field {
+  width: 6.25% !important;
+}
+.sp-form .two.wide.field {
+  width: 12.5% !important;
+}
+.sp-form .three.wide.field {
+  width: 18.75% !important;
+}
+.sp-form .four.wide.field {
+  width: 25% !important;
+}
+.sp-form .five.wide.field {
+  width: 31.25% !important;
+}
+.sp-form .six.wide.field {
+  width: 37.5% !important;
+}
+.sp-form .seven.wide.field {
+  width: 43.75% !important;
+}
+.sp-form .eight.wide.field {
+  width: 50% !important;
+}
+.sp-form .nine.wide.field {
+  width: 56.25% !important;
+}
+.sp-form .ten.wide.field {
+  width: 62.5% !important;
+}
+.sp-form .eleven.wide.field {
+  width: 68.75% !important;
+}
+.sp-form .twelve.wide.field {
+  width: 75% !important;
+}
+.sp-form .thirteen.wide.field {
+  width: 81.25% !important;
+}
+.sp-form .fourteen.wide.field {
+  width: 87.5% !important;
+}
+.sp-form .fifteen.wide.field {
+  width: 93.75% !important;
+}
+.sp-form .sixteen.wide.field {
+  width: 100% !important;
+}
+
+/* Swap to full width on mobile */
+@media only screen and (max-width: 767px) {
+  .sp-form:not(.unstackable) .two.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .two.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .three.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .three.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .four.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .four.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .five.fields:not(.unstackable) > .fields,
+  .sp-form:not(.unstackable) .five.fields:not(.unstackable) > .field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .two.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .three.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .four.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .five.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .six.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .seven.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .eight.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .nine.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .ten.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .eleven.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .twelve.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .thirteen.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .fourteen.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .fifteen.wide.field,
+  .sp-form:not(.unstackable) .fields:not(.unstackable) > .sixteen.wide.field {
+    width: 100% !important;
+  }
+  .sp-form .fields {
+    margin-bottom: 0em;
+  }
+}
+
+/*--------------------
+     Equal Width
+---------------------*/
+
+.ui[class*="equal width"].form .fields > .field,
+.sp-form [class*="equal width"].fields > .field {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/*--------------------
+    Inline Fields
+---------------------*/
+
+.sp-form .inline.fields {
+  margin: 0em 0em 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sp-form .inline.fields .field {
+  margin: 0em;
+  padding: 0em 1em 0em 0em;
+}
+
+/* Inline Label */
+.sp-form .inline.fields > label,
+.sp-form .inline.fields .field > label,
+.sp-form .inline.fields .field > p,
+.sp-form .inline.field > label,
+.sp-form .inline.field > p {
+  display: inline-block;
+  width: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  vertical-align: baseline;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  text-transform: none;
+}
+
+.sp-form .inline.fields > label,
+.sp-form .inline.fields .field:not(.checkbox) > label,
+.sp-form .inline.fields .field:not(.checkbox) > p,
+.sp-form .inline.field:not(.checkbox) > label,
+.sp-form .inline.field:not(.checkbox) > p {
+  font-weight: bold;
+}
+
+/* Grouped Inline Label */
+.sp-form .inline.fields > label {
+  margin: 0.035714em 1em 0em 0em;
+}
+
+/* Button Group */
+.sp-form .button-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 32px;
+  border-top: 1px solid var(--color-divider)
+}
+
+.sp-form .button-group > button:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Inline Input */
+.sp-form .inline.fields .field > input,
+.sp-form .inline.fields .field > select,
+.sp-form .inline.field > input,
+.sp-form .inline.field > select {
+  display: inline-block;
+  width: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+/* Label */
+.sp-form .inline.fields .field > :first-child,
+.sp-form .inline.field > :first-child {
+  margin: 5px 14px 0 0;
+}
+
+.sp-form .inline.field.multitextinput > label {
+  margin-top: 16px;
+}
+
+.sp-form .inline.fields .field > :only-child,
+.sp-form .inline.field > :only-child {
+  margin: 0;
+}
+
+/* Wide */
+.sp-form .inline.fields .wide.field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sp-form .inline.fields .wide.field > input,
+.sp-form .inline.fields .wide.field > select {
+  width: 100%;
+}
+
+/*--------------------
+        Sizes
+---------------------*/
+
+.sp-mini.form {
+  font-size: 9px;
+}
+.sp-tiny.form {
+  font-size: 10px;
+}
+.sp-small.form {
+  font-size: 12px;
+}
+.sp-form {
+  font-size: 14px;
+}
+.sp-large.form {
+  font-size: 16px;
+}
+.sp-big.form {
+  font-size: 18px;
+}
+.sp-huge.form {
+  font-size: 20px;
+}
+.sp-massive.form {
+  font-size: 24px;
+}
