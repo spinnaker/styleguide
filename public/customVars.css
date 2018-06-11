@@ -55,7 +55,8 @@
                             --body-bold-font-weight: 700;
                             --display-start-font-size: 22px;
                             --button-default-background-color: white;
-                            --button-font-size: 12px;
+                            --button-sm-font-size: 12px;
+                            --button-md-font-size: 14px;
                             --button-solid-padding: 6px 14px;
                             --button-hollow-padding: 6px 14px;
                             --button-border-radius: 3px;
