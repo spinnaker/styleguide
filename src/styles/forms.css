@@ -923,10 +923,23 @@ Icons
 
 /* Swap to full width on mobile */
 @media only screen and (max-width: 767px) {
-  .sp-form .fields {
+  .sp-form .fields, .sp-form .inline.field {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .sp-form .inline.field > label:first-child {
+    text-align: left;
+  }
+
+  .sp-form .inline.field > label {
+    width: 100%;
+  }
+
+  .sp-form .inline.field > div, .sp-form .inline.field > input {
+    flex: auto;
+  }
+
   .ui[class*="equal width"].form:not(.unstackable) .fields > .field,
   .sp-form:not(.unstackable) [class*="equal width"].fields:not(.unstackable) > .field,
   .sp-form:not(.unstackable) .two.fields:not(.unstackable) > .fields,

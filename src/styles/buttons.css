@@ -13,31 +13,43 @@ These are three categories for buttons based on function:
     6. buttons with icons - Buttons with icons to the left and right of the buttons
     7. zombie - Buttons that have a dashed border and is typically used with configurations.
 
-All buttons have a minimum width set.
+All buttons have a minimum width set. They can have two size variations: 
+    1. small(default)
+    2. medium (.medium selector) 
 
 <button class="primary">Primary Action</button>
 <button disabled class="primary">Primary Action</button>
+<button class="primary medium">Primary Action</button>
 
     <button class="primary">Primary Action</button>
+    <button class="primary medium">Primary Action</button>
 
 <button class="passive">Passive</button>
 <button disabled class="passive">Passive</button>
+<button class="passive medium">Passive</button>
 
     <button class="passive">Passive</button>
+    <button class="passive medium">Passive</button>
 
 <button class="passive"><i class="fa fa-trash"></i>Passive</button>
 <button disabled class="passive"><i class="fa fa-trash"></i>Passive</button>
+<button class="passive medium"><i class="fa fa-trash"></i>Passive</button>
 
     <button class="passive"><i class="fa fa-trash"></i>Passive</button>
+    <button class="passive medium"><i class="fa fa-trash"></i>Passive</button>
 
 <button class="danger">Danger</button>
 <button disabled class="danger">Danger</button>
+<button class="danger medium">Danger</button>
 
     <button class="danger">Danger</button>
+    <button class="danger medium">Danger</button>
 
 <button class="link">Link</button>
+<button class="link medium">Link</button>
 
     <button class="link">Link</button>
+    <button class="link medium">Link</button>
 
 <button class="nostyle">No styles attached Button</button>
 
@@ -45,8 +57,10 @@ All buttons have a minimum width set.
 
 <button class="zombie">Zombie Action</button>
 <button disabled class="zombie">Zombie Action</button>
+<button class="zombie medium">Zombie Action</button>
 
     <button class="zombie">Zombie Action</button>
+    <button class="zombie medium">Zombie Action</button>
 
 <button class="zombie">
   <i class="fa fa-trash"></i>
@@ -56,8 +70,16 @@ All buttons have a minimum width set.
   <i class="fa fa-trash"></i>
   <span>Zombie Action</span>
 </button>
+<button class="zombie medium">
+  <i class="fa fa-trash"></i>
+  <span>Zombie Action</span>
+</button>
 
     <button class="zombie">
+      <i >class="fa fa-trash"></i>
+      <span>Zombie Action</span>
+    </button>
+    <button class="zombie medium">
       <i >class="fa fa-trash"></i>
       <span>Zombie Action</span>
     </button>
@@ -82,42 +104,59 @@ margins between buttons.
 @title Links
 
 Here are the variations:
-1. a - Default link style.
-2. a.button(.primary/.passive/.danger) - Links can also look like buttons.
-3. a.nostyle - There is also a variation of link with no styles attached.
+    1. a - Default link style.
+    2. a.button(.primary/.passive/.danger) - Links can also look like buttons.
+    3. a.nostyle - There is also a variation of link with no styles attached.
+
+Each comes with two size options:
+    1. small(default)
+    2. medium
 
 <a>Link</a>
 
     <a>Link</a>
 
 <a class="button primary">Link looking like Primary</a>
+<a class="button primary medium">Link looking like Primary</a>
 
     <a class="button primary">Link looking like Primary</a>
+    <a class="button primary medium">Link looking like Primary</a>
 
 <a class="button passive">Link looking like Passive</a>
+<a class="button passive medium">Link looking like Passive</a>
 
     <a class="button passive">Link looking like Passive</a>
+    <a class="button passive medium">Link looking like Passive</a>
 
 <a class="button passive"><i class="fa fa-chevron-down"></i>Link looking like Passive</a>
+<a class="button passive medium"><i class="fa fa-chevron-down"></i>Link looking like Passive</a>
 
     <a class="button passive"><i class="fa fa-chevron-down"></i>Link looking like Passive</a>
+    <a class="button passive medium"><i class="fa fa-chevron-down"></i>Link looking like Passive</a>
 
 <a class="button danger">Link looking like Danger</a>
+<a class="button danger medium">Link looking like Danger</a>
 
     <a class="button danger">Link looking like Danger</a>
+    <a class="button danger medium">Link looking like Danger</a>
 
 <a class="button zombie"><i class="fa fa-search"></i>Link looking like Zombie</a>
+<a class="button zombie medium"><i class="fa fa-search"></i>Link looking like Zombie</a>
 
     <a class="button zombie"><i class="fa fa-search"></i>Link looking like Zombie</a>
+    <a class="button zombie medium"><i class="fa fa-search"></i>Link looking like Zombie</a>
 
 <a class="button zombie">Link looking like Zombie</a>
+<a class="button zombie medium">Link looking like Zombie</a>
 
     <a class="button zombie">Link looking like Zombie</a>
+    <a class="button zombie medium">Link looking like Zombie</a>
 */
 
 :root {
   --button-default-background-color: white;
-  --button-font-size: 12px;
+  --button-sm-font-size: 12px;
+  --button-md-font-size: 14px;
   --button-solid-padding: 6px 14px;
   --button-hollow-padding: 6px 14px;
   --button-border-radius: 3px;
@@ -148,7 +187,14 @@ button.primary *:not(i), a.button.primary *:not(i),
 button.passive *:not(i), a.button.passive *:not(i),
 button.danger *:not(i), a.button.danger *:not(i),
 button.zombie *:not(i), a.button.zombie *:not(i) {
-  font-size: var(--button-font-size);
+  font-size: var(--button-sm-font-size);
+}
+
+button.medium.primary *:not(i), a.button.medium.primary *:not(i),
+button.medium.passive *:not(i), a.button.medium.passive *:not(i),
+button.medium.danger *:not(i), a.button.medium.danger *:not(i),
+button.medium.zombie *:not(i), a.button.medium.zombie *:not(i) {
+  font-size: var(--button-md-font-size);
 }
 
 button.primary, a.button.primary,
@@ -158,10 +204,23 @@ button.zombie, a.button.zombie {
   border-radius: var(--button-border-radius);
   font-family: var(--button-font-family);
   letter-spacing: var(--button-letter-spacing);
-  font-size: var(--button-font-size);
   box-shadow: none;
   border: none;
   cursor: pointer;
+}
+
+button.primary, a.button.primary,
+button.passive, a.button.passive,
+button.danger, a.button.danger,
+button.zombie, a.button.zombie {
+  font-size: var(--button-sm-font-size);
+}
+
+button.medium.primary, a.button.medium.primary,
+button.medium.passive, a.button.medium.passive,
+button.medium.danger, a.button.medium.danger,
+button.medium.zombie, a.button.medium.zombie {
+  font-size: var(--button-md-font-size);
 }
 
 button.primary, a.button.primary {
