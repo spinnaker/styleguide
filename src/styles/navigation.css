@@ -197,6 +197,15 @@ nav.third-level h3 {
   }
 }
 
+/* TODO(archana-s): Fix this when the top level navigation is moved to this navigation system.  */
+@media (max-width: 1490px) {
+  nav.top-level > .container, nav.second-level > .container, nav.third-level > .container {
+    grid-column-start: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
 nav.third-level {
   padding-top: 5px;
 }
