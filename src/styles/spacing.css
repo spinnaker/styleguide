@@ -1,0 +1,388 @@
+/*
+@styleguide
+
+@title Spacing
+
+Paddings and Margins for all your elements and components.
+
+Here are the sizes:
+
+    xs: 4px
+    s: 8px
+    m: 12px
+    l: 16px
+    xl: 24px
+
+Here is the structure for selector options
+
+    1. .sp-padding-<size>-<location: optional>
+       Values for Size: xs, s, m, l, xl
+       Values for location: <empty>, top, right, bottom, left, xaxis, yaxis
+       Examples: .sp-padding-xs-top, .sp-padding-xs, .sp-padding-l-xaxis 
+    
+    2. .sp-margin-<size>-<location: optional>
+       Values for Size: xs, s, m, l, xl
+       Values for location: <empty>, top, right, bottom, left, xaxis, yaxis
+       Examples: .sp-margin-xs-top, .sp-margin-xs, .sp-margin-l-xaxis 
+
+In addition to regular paddings and margins, supporting spacing options for items within
+a container. The spacing is applied to every immediate item inside the container except the last.
+
+    .sp-group-margin-<size>-<location>
+
+    Size can be xs, s, m, l, xl
+    location can be yaxis or xaxis.
+    Examples: .sp-group-margin-s-xaxis
+
+*/
+
+:root {
+  --xl-spacing: 24px;
+  --l-spacing: 16px;
+  --m-spacing: 12px;
+  --s-spacing: 8px;
+  --xs-spacing: 4px;
+}
+
+.sp-padding-xl {
+  padding: var(--xl-spacing);
+}
+
+.sp-padding-l {
+  padding: var(--l-spacing);
+}
+
+.sp-padding-m {
+  padding: var(--m-spacing) ;
+}
+
+.sp-padding-s {
+  padding: var(--s-spacing);
+}
+
+.sp-padding-xs {
+  padding: var(--xs-spacing);
+}
+
+.sp-padding-xl-top {
+  padding-top: var(--xl-spacing);
+}
+
+.sp-padding-l-top {
+  padding-top: var(--l-spacing);
+}
+
+.sp-padding-m-top {
+  padding-top: var(--m-spacing) ;
+}
+
+.sp-padding-s-top {
+  padding-top: var(--s-spacing);
+}
+
+.sp-padding-xs-top {
+  padding-top: var(--xs-spacing);
+}
+
+.sp-padding-xl-bottom {
+  padding-bottom: var(--xl-spacing);
+}
+
+.sp-padding-l-bottom {
+  padding-bottom: var(--l-spacing);
+}
+
+.sp-padding-m-bottom {
+  padding-bottom: var(--m-spacing) ;
+}
+
+.sp-padding-s-bottom {
+  padding-bottom: var(--s-spacing);
+}
+
+.sp-padding-xs-bottom {
+  padding-bottom: var(--xs-spacing);
+}
+
+.sp-padding-xl-left {
+  padding-left: var(--xl-spacing);
+}
+
+.sp-padding-l-left {
+  padding-left: var(--l-spacing);
+}
+
+.sp-padding-m-left {
+  padding-left: var(--m-spacing) ;
+}
+
+.sp-padding-s-left {
+  padding-left: var(--s-spacing);
+}
+
+.sp-padding-xs-left {
+  padding-left: var(--xs-spacing);
+}
+
+.sp-padding-xl-right {
+  padding-right: var(--xl-spacing);
+}
+
+.sp-padding-l-right {
+  padding-right: var(--l-spacing);
+}
+
+.sp-padding-m-right {
+  padding-right: var(--m-spacing) ;
+}
+
+.sp-padding-s-right {
+  padding-right: var(--s-spacing);
+}
+
+.sp-padding-xs-right {
+  padding-right: var(--xs-spacing);
+}
+
+.sp-padding-xl-xaxis {
+  padding-left: var(--xl-spacing);
+  padding-right: var(--xl-spacing);
+}
+
+.sp-padding-l-xaxis {
+  padding-left: var(--l-spacing);
+  padding-right: var(--l-spacing);
+}
+
+.sp-padding-m-xaxis {
+  padding-left: var(--m-spacing) ;
+  padding-right: var(--m-spacing) ;
+}
+
+.sp-padding-s-xaxis {
+  padding-left: var(--s-spacing);
+  padding-right: var(--s-spacing);
+}
+
+.sp-padding-xs-xaxis {
+  padding-left: var(--xs-spacing);
+  padding-right: var(--xs-spacing);
+}
+
+.sp-padding-xl-yaxis {
+  padding-top: var(--xl-spacing);
+  padding-bottom: var(--xl-spacing);
+}
+
+.sp-padding-l-yaxis {
+  padding-top: var(--l-spacing);
+  padding-bottom: var(--l-spacing);
+}
+
+.sp-padding-m-yaxis {
+  padding-top: var(--m-spacing) ;
+  padding-bottom: var(--m-spacing) ;
+}
+
+.sp-padding-s-yaxis {
+  padding-top: var(--s-spacing);
+  padding-bottom: var(--s-spacing);
+}
+
+.sp-padding-xs-yaxis {
+  padding-top: var(--xs-spacing);
+  padding-bottom: var(--xs-spacing);
+}
+
+.sp-margin-xl {
+  margin: var(--xl-spacing);
+}
+
+.sp-margin-l {
+  margin: var(--l-spacing);
+}
+
+.sp-margin-m {
+  margin: var(--m-spacing) ;
+}
+
+.sp-margin-s {
+  margin: var(--s-spacing);
+}
+
+.sp-margin-xs {
+  margin: var(--xs-spacing);
+}
+
+.sp-margin-xl-top {
+  margin-top: var(--xl-spacing);
+}
+
+.sp-margin-l-top {
+  margin-top: var(--l-spacing);
+}
+
+.sp-margin-m-top {
+  margin-top: var(--m-spacing) ;
+}
+
+.sp-margin-s-top {
+  margin-top: var(--s-spacing);
+}
+
+.sp-margin-xs-top {
+  margin-top: var(--xs-spacing);
+}
+
+.sp-margin-xl-bottom {
+  margin-bottom: var(--xl-spacing);
+}
+
+.sp-margin-l-bottom {
+  margin-bottom: var(--l-spacing);
+}
+
+.sp-margin-m-bottom {
+  margin-bottom: var(--m-spacing) ;
+}
+
+.sp-margin-s-bottom {
+  margin-bottom: var(--s-spacing);
+}
+
+.sp-margin-xs-bottom {
+  margin-bottom: var(--xs-spacing);
+}
+
+.sp-margin-xl-left {
+  margin-left: var(--xl-spacing);
+}
+
+.sp-margin-l-left {
+  margin-left: var(--l-spacing);
+}
+
+.sp-margin-m-left {
+  margin-left: var(--m-spacing) ;
+}
+
+.sp-margin-s-left {
+  margin-left: var(--s-spacing);
+}
+
+.sp-margin-xs-left {
+  margin-left: var(--xs-spacing);
+}
+
+.sp-margin-xl-right {
+  margin-right: var(--xl-spacing);
+}
+
+.sp-margin-l-right {
+  margin-right: var(--l-spacing);
+}
+
+.sp-margin-m-right {
+  margin-right: var(--m-spacing) ;
+}
+
+.sp-margin-s-right {
+  margin-right: var(--s-spacing);
+}
+
+.sp-margin-xs-right {
+  margin-right: var(--xs-spacing);
+}
+
+.sp-margin-xl-xaxis {
+  margin-left: var(--xl-spacing);
+  margin-right: var(--xl-spacing);
+}
+
+.sp-margin-l-xaxis {
+  margin-left: var(--l-spacing);
+  margin-right: var(--l-spacing);
+}
+
+.sp-margin-m-xaxis {
+  margin-left: var(--m-spacing) ;
+  margin-right: var(--m-spacing) ;
+}
+
+.sp-margin-s-xaxis {
+  margin-left: var(--s-spacing);
+  margin-right: var(--s-spacing);
+}
+
+.sp-margin-xs-xaxis {
+  margin-left: var(--xs-spacing);
+  margin-right: var(--xs-spacing);
+}
+
+.sp-margin-xl-yaxis {
+  margin-top: var(--xl-spacing);
+  margin-bottom: var(--xl-spacing);
+}
+
+.sp-margin-l-yaxis {
+  margin-top: var(--l-spacing);
+  margin-bottom: var(--l-spacing);
+}
+
+.sp-margin-m-yaxis {
+  margin-top: var(--m-spacing) ;
+  margin-bottom: var(--m-spacing) ;
+}
+
+.sp-margin-s-yaxis {
+  margin-top: var(--s-spacing);
+  margin-bottom: var(--s-spacing);
+}
+
+.sp-margin-xs-yaxis {
+  margin-top: var(--xs-spacing);
+  margin-bottom: var(--xs-spacing);
+}
+
+
+
+.sp-group-margin-xs-xaxis > *:not(:last-child) {
+  margin-right: var(--xs-spacing);
+}
+
+.sp-group-margin-s-xaxis > *:not(:last-child) {
+  margin-right: var(--s-spacing);
+}
+
+.sp-group-margin-m-xaxis > *:not(:last-child) {
+  margin-right: var(--m-spacing);
+}
+
+.sp-group-margin-l-xaxis > *:not(:last-child) {
+  margin-right: var(--l-spacing);
+}
+
+.sp-group-margin-xl-xaxis > *:not(:last-child) {
+  margin-right: var(--xl-spacing);
+}
+
+.sp-group-margin-xs-yaxis > *:not(:last-child) {
+  margin-bottom: var(--xs-spacing);
+}
+
+.sp-group-margin-s-yaxis > *:not(:last-child) {
+  margin-bottom: var(--s-spacing);
+}
+
+.sp-group-margin-m-yaxis > *:not(:last-child) {
+  margin-bottom: var(--m-spacing);
+}
+
+.sp-group-margin-l-yaxis > *:not(:last-child) {
+  margin-bottom: var(--l-spacing);
+}
+
+.sp-group-margin-xl-yaxis > *:not(:last-child) {
+  margin-bottom: var(--xl-spacing);
+}
+
