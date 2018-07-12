@@ -314,6 +314,7 @@ a.nostyle, a.nostyle:hover, a.nostyle:active, a.nostyle:focus {
 }
 
 /* Area to put all buttons */
-.button-group button:not(:last-child) {
+.button-group button:not(:last-child),
+.button-group a.button:not(:last-child) {
   margin-right: 2px;
 }
