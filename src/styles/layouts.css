@@ -106,8 +106,8 @@ Horizontal Layout + items occupying a space of ratio 1:2:3
 
     <div class="horizontal">
       <div class="first flex-1">First</div>
-      <div class="second flex-1">Second</div>
-      <div class="third flex-2">Third</div>
+      <div class="second flex-2">Second</div>
+      <div class="third flex-3">Third</div>
     </div>
 
 Horizontal Layout + items occupying a space of 0:1:2
