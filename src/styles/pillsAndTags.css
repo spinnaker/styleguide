@@ -135,6 +135,30 @@ Badges are also offered in 2 sizes:
     <div class="sp-badge warn">Warn</div>
 */
 
+/* @styleguide 
+
+@title Counters
+
+Counters are typically numbers to indicate how many of something is present. 
+This is useful in cases like # of failures, # of successful runs, etc.
+
+<div class="sp-counter danger">6</div>
+    
+<div class="sp-counter info">12</div>
+    
+<div class="sp-counter warn">100</div>
+    
+<div class="sp-counter alert">50</div>
+
+    <div class="sp-counter danger">6</div>
+        
+    <div class="sp-counter info">12</div>
+        
+    <div class="sp-counter warn">100</div>
+        
+    <div class="sp-counter alert">50</div>
+*/
+
 :root {
   --pill-border-radius: 20px;
   --pill-small-font-size: 12px;
@@ -159,12 +183,12 @@ Badges are also offered in 2 sizes:
 }
 
 /* Remove important when bootstrap is removed */
-.pill, .sp-badge {
+.pill, .sp-badge, .sp-counter {
   border-radius: var(--pill-border-radius) !important;
 }
 
 .pill, .pill *,
-.sp-badge, .sp-badge * {
+.sp-badge, .sp-badge *, .sp-counter {
   font-size: var(--pill-small-font-size);
   display: inline-block;
 }
@@ -175,12 +199,14 @@ Badges are also offered in 2 sizes:
 }
 
 .pill.success, .pill.danger, .pill.warn, .pill.alert,
-.sp-badge.success, .sp-badge.danger, .sp-badge.warn, .sp-badge.alert {
+.sp-badge.success, .sp-badge.danger, .sp-badge.warn, .sp-badge.alert,
+.sp-counter.success, .sp-counter.danger, .sp-counter.warn, .sp-counter.alert {
   color: var(--color-text-on-dark);
 }
 
 .pill.info, .pill.info *, .pill.category,
-.sp-badge.info, .sp-badge.info *, .sp-badge.category {
+.sp-badge.info, .sp-badge.info *, .sp-badge.category,
+.sp-counter.info {
   background-color: var(--color-accent-g2);
   color: var(--color-primary);
   font-weight : bold;
@@ -196,19 +222,19 @@ Badges are also offered in 2 sizes:
   position: relative;
 }
 
-.pill.success, .sp-badge.success {
+.pill.success, .sp-badge.success, .sp-counter.success {
   background-color: var(--color-success);
 }
 
-.pill.danger, .sp-badge.danger {
+.pill.danger, .sp-badge.danger, .sp-counter.danger {
   background-color: var(--color-danger);
 }
 
-.pill.warn, .sp-badge.warn {
+.pill.warn, .sp-badge.warn, .sp-counter.warn {
   background-color: var(--color-warning);
 }
 
-.pill.alert, .sp-badge.alert {
+.pill.alert, .sp-badge.alert, .sp-counter.alert {
   background-color: var(--color-alert);
 }
 
@@ -218,4 +244,9 @@ Badges are also offered in 2 sizes:
 
 .sp-badge.large i {
   margin-top: 4px;
+}
+
+.sp-counter {
+  font-weight: bold;
+  padding: 1px 6px;
 }
