@@ -4,7 +4,7 @@
   "description": "Base styles used within Spinnaker as CSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js & gulp"
+    "start": "gulp & node index.js"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,11 @@
   "license": "Apache-2.0",
   "dependencies": {
     "autoprefixer": "^8.0.0",
+    "browser-sync": "^2.26.3",
     "cssnano": "^3.10.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^7.0.1",
+    "gulp": "4.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-postcss": "7.0.1",
     "postcss-css-variables": "^0.8.0",
     "postcss-extend": "^1.0.5",
     "postcss-extract-vars": "^0.0.1",
