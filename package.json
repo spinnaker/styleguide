@@ -11,20 +11,18 @@
     "url": "https://github.com/spinnaker/styleguide.git"
   },
   "license": "Apache-2.0",
-  "dependencies": {
-    "autoprefixer": "^8.0.0",
-    "browser-sync": "^2.26.3",
-    "cssnano": "^3.10.0",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "9.4.8",
+    "cssnano": "4.1.10",
+    "express": "4.16.3",
     "gulp": "4.0.0",
     "gulp-concat": "2.6.1",
-    "gulp-postcss": "7.0.1",
-    "postcss-css-variables": "^0.8.0",
-    "postcss-extend": "^1.0.5",
-    "postcss-extract-vars": "^0.0.1",
-    "postcss-import": "^11.1.0",
-    "postcss-style-guide": "^0.14.0"
-  },
-  "devDependencies": {
-    "express": "^4.16.3"
+    "gulp-postcss": "8.0.0",
+    "postcss-css-variables": "0.11.0",
+    "postcss-extend": "1.0.5",
+    "postcss-extract-vars": "0.0.1",
+    "postcss-import": "12.0.1",
+    "postcss-style-guide": "0.14.0"
   }
 }
