@@ -4,6 +4,8 @@
   "description": "Base styles used within Spinnaker as CSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "prepublishOnly": "npm run build",
     "start": "gulp & node index.js"
   },
   "repository": {
