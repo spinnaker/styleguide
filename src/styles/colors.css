@@ -21,6 +21,15 @@
     --color-alert: #DF8D3B;
     --color-alert-light: #FAD6AA;
 
+    --color-validation-error: #CE0000;
+    --color-validation-error-light: #FCDDDE;
+    --color-validation-info: #0065b7;
+    --color-validation-info-light: #D8F2FA;
+    --color-validation-success: #007023;
+    --color-validation-success-light: #DBF1E3;
+    --color-validation-warning: #F7CE00;
+    --color-validation-warning-light: #FAECAC;
+
     --color-black: #000000;
     --color-mineshaft: #393939;
     --color-dovegray: #6A6A6A;
