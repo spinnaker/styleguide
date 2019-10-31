@@ -1,61 +1,66 @@
 /* @start color */
 :root {
-    /* Main colors for the app: Logo colors, banner colors, main background  */
-    --color-primary: #39546A;
-    --color-primary-g1: #4B7293;
+  /* Main colors for the app: Logo colors, banner colors, main background  */
+  --color-primary: #39546A;
+  --color-primary-g1: #4B7293;
 
-    /* The inevitables */
-    --color-accent: #149CB5;
-    --color-accent-g1: #ABD7E0;
-    --color-accent-g2: #D7E8ED;
-    --color-accent-g3: #EBF1F3;
-    --color-accessory: #7E94A4;
-    --color-accessory-light: #C1D4DB;
+  /* The inevitables */
+  --color-accent: #149CB5;
+  --color-accent-g1: #ABD7E0;
+  --color-accent-g2: #D7E8ED;
+  --color-accent-g3: #EBF1F3;
+  --color-accessory: #7E94A4;
+  --color-accessory-light: #C1D4DB;
 
-    --color-success: #8AAD6A;
-    --color-success-light: #BFDD9A;
-    --color-danger: #BB231E;
-    --color-danger-light: #F1C0BF;
-    --color-warning: #EEBB3C;
-    --color-warning-light: #FFE7AB;
-    --color-alert: #DF8D3B;
-    --color-alert-light: #FAD6AA;
+  --color-success: #8AAD6A;
+  --color-success-light: #BFDD9A;
+  --color-danger: #BB231E;
+  --color-danger-light: #F1C0BF;
+  --color-warning: #EEBB3C;
+  --color-warning-light: #FFE7AB;
+  --color-alert: #DF8D3B;
+  --color-alert-light: #FAD6AA;
 
-    --color-validation-error: #CE0000;
-    --color-validation-error-light: #FCDDDE;
-    --color-validation-info: #0065b7;
-    --color-validation-info-light: #D8F2FA;
-    --color-validation-success: #007023;
-    --color-validation-success-light: #DBF1E3;
-    --color-validation-warning: #F7CE00;
-    --color-validation-warning-light: #FAECAC;
+  --color-validation-error: #CE0000;
+  --color-validation-error-light: #FCDDDE;
+  --color-validation-info: #0065b7;
+  --color-validation-info-light: #D8F2FA;
+  --color-validation-success: #007023;
+  --color-validation-success-light: #DBF1E3;
+  --color-validation-warning: #F7CE00;
+  --color-validation-warning-light: #FAECAC;
 
-    --color-black: #000000;
-    --color-mineshaft: #393939;
-    --color-dovegray: #6A6A6A;
-    --color-concrete: #979797;
-    --color-titanium: #B3B3B3;
-    --color-silver: #BEBEBE;
-    --color-alto: #D6D6D6;
-    --color-seashell: #E1E1E1;
-    --color-cirrus: #EFEFEF;
-    --color-alabaster: #F8F8F8;
-    --color-white: #FFFFFF;
+  --color-status-info: #61b9ff;
+  --color-status-warning: #ffad26;
+  --color-status-error: #ff9090;
 
-    /* Divider Colors - Used for borders and dividers*/
-    --color-divider: var(--color-alto);
+  --color-black: #000000;
+  --color-mineshaft: #393939;
+  --color-dovegray: #6A6A6A;
+  --color-concrete: #979797;
+  --color-titanium: #B3B3B3;
+  --color-silver: #BEBEBE;
+  --color-alto: #D6D6D6;
+  --color-seashell: #E1E1E1;
+  --color-cirrus: #EFEFEF;
+  --color-alabaster: #F8F8F8;
+  --color-white: #FFFFFF;
 
-    /* Text colors */
-    --color-text-primary: var(--color-primary);
-    --color-text-secondary: var(--color-black);
-    --color-text-accent: var(--color-accent);
-    --color-text-caption: #747474;
-    --color-text-link: #478CC8;
-    --color-text-on-dark: #FFFFFF;
+  /* Divider Colors - Used for borders and dividers*/
+  --color-divider: var(--color-alto);
 
-    --color-github-history-add: #eaffea;
-    --color-github-history-remove: #ffecec;
+  /* Text colors */
+  --color-text-primary: var(--color-primary);
+  --color-text-secondary: var(--color-black);
+  --color-text-accent: var(--color-accent);
+  --color-text-caption: #747474;
+  --color-text-link: #478CC8;
+  --color-text-on-dark: #FFFFFF;
+
+  --color-github-history-add: #eaffea;
+  --color-github-history-remove: #ffecec;
 }
+
 /* @end color */
 
 /*

@@ -23,6 +23,9 @@
                             --color-validation-success-light: #DBF1E3;
                             --color-validation-warning: #F7CE00;
                             --color-validation-warning-light: #FAECAC;
+                            --color-status-info: #61b9ff;
+                            --color-status-warning: #ffad26;
+                            --color-status-error: #ff9090;
                             --color-black: #000000;
                             --color-mineshaft: #393939;
                             --color-dovegray: #6A6A6A;
