@@ -45,6 +45,12 @@
   --color-cirrus: #EFEFEF;
   --color-alabaster: #F8F8F8;
   --color-white: #FFFFFF;
+  --color-charcoal: #444444;
+  --color-porcelain: #CCCCCC;
+  --color-smoke: #F7F7F7;
+  --color-nobel: #999999;
+  --color-blumine: #31556C;
+  --color-regal: #1E3C5A;
 
   /* Divider Colors - Used for borders and dividers*/
   --color-divider: var(--color-alto);
