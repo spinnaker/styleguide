@@ -184,6 +184,13 @@ Here's the styleguide template for this project: ../styleguide_template/template
   --body-font-weight: 400;
   --heading-bold-font-weight: 600;
   --body-bold-font-weight: 700;
+
+  --text-weight-extra-light: 200;
+  --text-weight-light: 300;
+  --text-weight-regular: 400;
+  --text-weight-semibold: 600;
+  --text-weight-bold: 700;
+  --text-weight-black: 900;
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -249,4 +256,58 @@ h1, h2, h3, h4, h5, h6, p, div, span, section, li {
 
 .bold:not([class*="heading-"]) {
   font-weight: var(--body-bold-font-weight);
+}
+
+/*
+ * =========================
+ * Text weights
+ * =========================
+ */
+
+.text-extra-light {
+  font-weight: --text-weight-extra-light;
+}
+
+.text-light {
+  font-weight: --text-weight-light;
+}
+
+.text-regular {
+  font-weight: --text-weight-regular;
+}
+
+/*
+ * while lighter weights get important readability/clarity benefits
+ * from subpixel antialiasing, heavier weights lose clarity in areas
+ * like the inside of loops/curves etc. and can appear much darker than
+ * intended with the same color as a lighter weight. Let's move up to
+ * the full pixel antialiasing when we hit semibold, and rely on text color
+ * to ensure contrast ratios are still sufficiently high.
+ */
+.text-semibold {
+  font-weight: --text-weight-semibold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-bold {
+  font-weight: --text-weight-bold;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-black {
+  font-weight: --text-weight-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+ * =========================
+ * Text styles
+ * =========================
+ */
+
+.text-italic {
+  font-style: italic;
 }
