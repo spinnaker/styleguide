@@ -37,6 +37,12 @@
                             --color-cirrus: #EFEFEF;
                             --color-alabaster: #F8F8F8;
                             --color-white: #FFFFFF;
+                            --color-charcoal: #444444;
+                            --color-porcelain: #CCCCCC;
+                            --color-smoke: #F7F7F7;
+                            --color-nobel: #999999;
+                            --color-blumine: #31556C;
+                            --color-regal: #1E3C5A;
                             --color-divider: var(--color-alto);
                             --color-text-primary: var(--color-primary);
                             --color-text-secondary: var(--color-black);
@@ -64,6 +70,12 @@
                             --body-font-weight: 400;
                             --heading-bold-font-weight: 600;
                             --body-bold-font-weight: 700;
+                            --text-weight-extra-light: 200;
+                            --text-weight-light: 300;
+                            --text-weight-regular: 400;
+                            --text-weight-semibold: 600;
+                            --text-weight-bold: 700;
+                            --text-weight-black: 900;
                             --display-start-font-size: 22px;
                             --button-default-background-color: white;
                             --button-sm-font-size: 12px;
