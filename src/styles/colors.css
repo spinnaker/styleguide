@@ -30,9 +30,25 @@
   --color-validation-warning: #F7CE00;
   --color-validation-warning-light: #FAECAC;
 
+  --color-status-inactive: #c0c0c0;
+  --color-status-neutral: var(--color-nobel);
   --color-status-info: #61b9ff;
+  --color-status-progress: #61b9ff;
+  --color-status-success: #64c800;
   --color-status-warning: #ffad26;
-  --color-status-error: #ff9090;
+  --color-status-error: #ff8282;
+
+  --color-status-inactive-light: #666666;
+  --color-status-neutral-light: #ebebeb;
+  --color-status-info-light: #e6f0ff;
+  --color-status-progress-light: #e6f0ff;
+  --color-status-success-light: #e1f5d2;
+  --color-status-warning-light: #f8f8bb;
+  --color-status-error-light: #ffe1e1;
+
+  --color-icon-light: var(--color-white),
+  --color-icon-neutral: rgba(0, 0, 0, 0.5),
+  --color-icon-dark: var(--color-black),
 
   --color-black: #000000;
   --color-mineshaft: #393939;
