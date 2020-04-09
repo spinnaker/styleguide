@@ -266,14 +266,20 @@ h1, h2, h3, h4, h5, h6, p, div, span, section, li {
 
 .text-extra-light {
   font-weight: var(--text-weight-extra-light);
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 .text-light {
   font-weight: var(--text-weight-light);
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 .text-regular {
   font-weight: var(--text-weight-regular);
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 /*

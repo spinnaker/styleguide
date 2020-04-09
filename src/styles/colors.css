@@ -46,9 +46,9 @@
   --color-status-warning-light: #f8f8bb;
   --color-status-error-light: #ffe1e1;
 
-  --color-icon-light: var(--color-white),
-  --color-icon-neutral: rgba(0, 0, 0, 0.5),
-  --color-icon-dark: var(--color-black),
+  --color-icon-light: var(--color-white);
+  --color-icon-neutral: rgba(0, 0, 0, 0.5);
+  --color-icon-dark: var(--color-black);
 
   --color-black: #000000;
   --color-mineshaft: #393939;
