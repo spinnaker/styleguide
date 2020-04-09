@@ -7,6 +7,8 @@ Paddings and Margins for all your elements and components.
 
 Here are the sizes:
 
+    3xs: 1px
+    2xs: 2px
     xs: 4px
     s: 8px
     m: 12px
@@ -16,12 +18,12 @@ Here are the sizes:
 Here is the structure for selector options
 
     1. .sp-padding-<size>-<location: optional>
-       Values for Size: xs, s, m, l, xl
+       Values for Size: 3xs, 2xs, xs, s, m, l, xl
        Values for location: <empty>, top, right, bottom, left, xaxis, yaxis
        Examples: .sp-padding-xs-top, .sp-padding-xs, .sp-padding-l-xaxis 
     
     2. .sp-margin-<size>-<location: optional>
-       Values for Size: xs, s, m, l, xl
+       Values for Size: 3xs, 2xs, xs, s, m, l, xl
        Values for location: <empty>, top, right, bottom, left, xaxis, yaxis
        Examples: .sp-margin-xs-top, .sp-margin-xs, .sp-margin-l-xaxis 
 
@@ -30,7 +32,7 @@ a container. The spacing is applied to every immediate item inside the container
 
     .sp-group-margin-<size>-<location>
 
-    Size can be xs, s, m, l, xl
+    Size can be 3xs, 2xs, xs, s, m, l, xl
     location can be yaxis or xaxis.
     Examples: .sp-group-margin-s-xaxis
 
@@ -42,6 +44,8 @@ a container. The spacing is applied to every immediate item inside the container
   --m-spacing: 12px;
   --s-spacing: 8px;
   --xs-spacing: 4px;
+  --2xs-spacing: 2px;
+  --3xs-spacing: 1px;
 }
 
 .sp-padding-xl {
@@ -64,6 +68,14 @@ a container. The spacing is applied to every immediate item inside the container
   padding: var(--xs-spacing);
 }
 
+.sp-padding-2xs {
+  padding: var(--2xs-spacing);
+}
+
+.sp-padding-3xs {
+  padding: var(--3xs-spacing);
+}
+
 .sp-padding-xl-top {
   padding-top: var(--xl-spacing);
 }
@@ -82,6 +94,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-padding-xs-top {
   padding-top: var(--xs-spacing);
+}
+
+.sp-padding-2xs-top {
+  padding-top: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-top {
+  padding-top: var(--3xs-spacing);
 }
 
 .sp-padding-xl-bottom {
@@ -104,6 +124,14 @@ a container. The spacing is applied to every immediate item inside the container
   padding-bottom: var(--xs-spacing);
 }
 
+.sp-padding-2xs-bottom {
+  padding-bottom: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-bottom {
+  padding-bottom: var(--3xs-spacing);
+}
+
 .sp-padding-xl-left {
   padding-left: var(--xl-spacing);
 }
@@ -124,6 +152,14 @@ a container. The spacing is applied to every immediate item inside the container
   padding-left: var(--xs-spacing);
 }
 
+.sp-padding-2xs-left {
+  padding-left: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-left {
+  padding-left: var(--3xs-spacing);
+}
+
 .sp-padding-xl-right {
   padding-right: var(--xl-spacing);
 }
@@ -142,6 +178,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-padding-xs-right {
   padding-right: var(--xs-spacing);
+}
+
+.sp-padding-2xs-right {
+  padding-right: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-right {
+  padding-right: var(--3xs-spacing);
 }
 
 .sp-padding-xl-xaxis {
@@ -169,6 +213,16 @@ a container. The spacing is applied to every immediate item inside the container
   padding-right: var(--xs-spacing);
 }
 
+.sp-padding-2xs-xaxis {
+  padding-left: var(--2xs-spacing);
+  padding-right: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-xaxis {
+  padding-left: var(--3xs-spacing);
+  padding-right: var(--3xs-spacing);
+}
+
 .sp-padding-xl-yaxis {
   padding-top: var(--xl-spacing);
   padding-bottom: var(--xl-spacing);
@@ -194,6 +248,16 @@ a container. The spacing is applied to every immediate item inside the container
   padding-bottom: var(--xs-spacing);
 }
 
+.sp-padding-2xs-yaxis {
+  padding-top: var(--2xs-spacing);
+  padding-bottom: var(--2xs-spacing);
+}
+
+.sp-padding-3xs-yaxis {
+  padding-top: var(--3xs-spacing);
+  padding-bottom: var(--3xs-spacing);
+}
+
 .sp-margin-xl {
   margin: var(--xl-spacing);
 }
@@ -212,6 +276,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-margin-xs {
   margin: var(--xs-spacing);
+}
+
+.sp-margin-2xs {
+  margin: var(--2xs-spacing);
+}
+
+.sp-margin-3xs {
+  margin: var(--3xs-spacing);
 }
 
 .sp-margin-xl-top {
@@ -234,6 +306,14 @@ a container. The spacing is applied to every immediate item inside the container
   margin-top: var(--xs-spacing);
 }
 
+.sp-margin-2xs-top {
+  margin-top: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-top {
+  margin-top: var(--3xs-spacing);
+}
+
 .sp-margin-xl-bottom {
   margin-bottom: var(--xl-spacing);
 }
@@ -252,6 +332,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-margin-xs-bottom {
   margin-bottom: var(--xs-spacing);
+}
+
+.sp-margin-2xs-bottom {
+  margin-bottom: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-bottom {
+  margin-bottom: var(--3xs-spacing);
 }
 
 .sp-margin-xl-left {
@@ -274,6 +362,14 @@ a container. The spacing is applied to every immediate item inside the container
   margin-left: var(--xs-spacing);
 }
 
+.sp-margin-2xs-left {
+  margin-left: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-left {
+  margin-left: var(--3xs-spacing);
+}
+
 .sp-margin-xl-right {
   margin-right: var(--xl-spacing);
 }
@@ -292,6 +388,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-margin-xs-right {
   margin-right: var(--xs-spacing);
+}
+
+.sp-margin-2xs-right {
+  margin-right: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-right {
+  margin-right: var(--3xs-spacing);
 }
 
 .sp-margin-xl-xaxis {
@@ -319,6 +423,16 @@ a container. The spacing is applied to every immediate item inside the container
   margin-right: var(--xs-spacing);
 }
 
+.sp-margin-2xs-xaxis {
+  margin-left: var(--2xs-spacing);
+  margin-right: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-xaxis {
+  margin-left: var(--3xs-spacing);
+  margin-right: var(--3xs-spacing);
+}
+
 .sp-margin-xl-yaxis {
   margin-top: var(--xl-spacing);
   margin-bottom: var(--xl-spacing);
@@ -344,10 +458,27 @@ a container. The spacing is applied to every immediate item inside the container
   margin-bottom: var(--xs-spacing);
 }
 
+.sp-margin-2xs-yaxis {
+  margin-top: var(--2xs-spacing);
+  margin-bottom: var(--2xs-spacing);
+}
+
+.sp-margin-3xs-yaxis {
+  margin-top: var(--3xs-spacing);
+  margin-bottom: var(--3xs-spacing);
+}
 
 
 .sp-group-margin-xs-xaxis > *:not(:last-child) {
   margin-right: var(--xs-spacing);
+}
+
+.sp-group-margin-2xs-xaxis > *:not(:last-child) {
+  margin-right: var(--2xs-spacing);
+}
+
+.sp-group-margin-3xs-xaxis > *:not(:last-child) {
+  margin-right: var(--3xs-spacing);
 }
 
 .sp-group-margin-s-xaxis > *:not(:last-child) {
@@ -368,6 +499,14 @@ a container. The spacing is applied to every immediate item inside the container
 
 .sp-group-margin-xs-yaxis > *:not(:last-child) {
   margin-bottom: var(--xs-spacing);
+}
+
+.sp-group-margin-2xs-yaxis > *:not(:last-child) {
+  margin-bottom: var(--2xs-spacing);
+}
+
+.sp-group-margin-3xs-yaxis > *:not(:last-child) {
+  margin-bottom: var(--3xs-spacing);
 }
 
 .sp-group-margin-s-yaxis > *:not(:last-child) {
