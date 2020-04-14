@@ -7,6 +7,7 @@ module.exports = {
   '#EBF1F3': '--color-accent-g3',
   '#7E94A4': '--color-accessory',
   '#C1D4DB': '--color-accessory-light',
+  '#BBDEE8': '--color-background-active',
   '#8AAD6A': '--color-success',
   '#BFDD9A': '--color-success-light',
   '#BB231E': '--color-danger',
