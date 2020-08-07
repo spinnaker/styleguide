@@ -30,6 +30,7 @@
                             --color-status-success: #64c800;
                             --color-status-warning: #ffad26;
                             --color-status-error: #ff8282;
+                            --color-status-archived: #806e5c;
                             --color-status-inactive-light: #666666;
                             --color-status-neutral-light: #ebebeb;
                             --color-status-info-light: #e6f0ff;
@@ -37,6 +38,7 @@
                             --color-status-success-light: #e1f5d2;
                             --color-status-warning-light: #f8f8bb;
                             --color-status-error-light: #ffe1e1;
+                            --color-status-archived-light: #f1ecea;
                             --color-icon-light: var(--color-white);
                             --color-icon-neutral: rgba(0, 0, 0, 0.5);
                             --color-icon-dark: var(--color-black);
@@ -64,7 +66,6 @@
                             --color-text-caption: #747474;
                             --color-text-link: #478CC8;
                             --color-text-on-dark: #FFFFFF;
-                            --color-background-accent: #bbdee8;
                             --color-github-history-add: #eaffea;
                             --color-github-history-remove: #ffecec;
                             --heading-font-weight: 600;
