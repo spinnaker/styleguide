@@ -358,6 +358,14 @@ a container. The spacing is applied to every immediate item inside the container
   margin: var(--3xs-spacing);
 }
 
+.sp-margin-3xl-top {
+  margin-top: var(--3xl-spacing);
+}
+
+.sp-margin-2xl-top {
+  margin-top: var(--2xl-spacing);
+}
+
 .sp-margin-xl-top {
   margin-top: var(--xl-spacing);
 }
