@@ -1,6 +1,6 @@
 {
   "name": "@spinnaker/styleguide",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Base styles used within Spinnaker as CSS",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
