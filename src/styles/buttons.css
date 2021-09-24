@@ -161,7 +161,7 @@ Each comes with two size options:
   --button-hollow-padding: 6px 14px;
   --button-border-radius: 3px;
   --button-letter-spacing: 0.04em;
-  --button-font-family: 'Source Sans Pro', sans-serif;
+  --button-font-family: 'Source Sans 3', sans-serif;
   --button-primary-hover-bg: #1d8499;
   --button-passive-hover-bg: #e6e6e6;
 }
