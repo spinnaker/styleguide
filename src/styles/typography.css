@@ -200,7 +200,7 @@ Here's the styleguide template for this project: ../styleguide_template/template
 }
 
 h1, h2, h3, h4, h5, h6, p, div, span, section, li {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 *[class^='headline-'] {
