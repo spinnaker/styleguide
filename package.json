@@ -17,7 +17,7 @@
   "devDependencies": {
     "autoprefixer": "9.4.8",
     "cssnano": "4.1.10",
-    "express": "4.16.3",
+    "express": "4.17.3",
     "gulp": "4.0.0",
     "gulp-concat": "2.6.1",
     "gulp-postcss": "8.0.0",
